@@ -1,7 +1,9 @@
 class ShowsController < ApplicationController
   def index
-    @shows = ['Boy Meets World', 'Stranger Things', 'Locke and Key']
+    @shows = Show.all
   end
 
-  def show; end
+  def show
+    @show = Show.find(params[:id])
+  end
 end
