@@ -1,5 +1,9 @@
 class ShowsController < ApplicationController
-  def index; end
+  def index
+    @shows = Show.released
+  end
 
-  def show; end
+  def show
+    @show = Show.find(params[:id])
+  end
 end

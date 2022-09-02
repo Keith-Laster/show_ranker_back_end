@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_24_005716) do
+ActiveRecord::Schema.define(version: 2022_08_26_183132) do
 
   create_table "shows", force: :cascade do |t|
     t.string "title"
     t.string "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.date "debut"
+    t.string "image_file_name", default: "keith_face.png"
   end
 
 end
