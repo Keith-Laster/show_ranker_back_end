@@ -4,6 +4,6 @@ class Show < ApplicationRecord
   validates :title, :debut, presence: true
 
   def self.released
-    where('debut < ?', Time.now).order('released_on desc')
+    where('debut < ?', Time.now).order('debut desc')
   end
 end
